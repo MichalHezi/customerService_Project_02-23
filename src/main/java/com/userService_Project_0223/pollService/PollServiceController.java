@@ -9,11 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/poll")
 public class PollServiceController {
 
-    @Autowired
-    private PollServiceController pollServiceController;
 
-    @GetMapping
-    String getStringFromSecondMicroService(){
-        return pollServiceController.getStringFromSecondMicroService();
-    }
+
+//    @GetMapping
+//    String getStringFromSecondMicroService(){
+//        return pollServiceController.getStringFromSecondMicroService();
+//    }
 }

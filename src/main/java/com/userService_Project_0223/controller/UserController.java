@@ -23,14 +23,24 @@ public class UserController {
         return userService.deleteUserById(id);
     }
 
-    @PutMapping("/update/name")
-    public String updateUserName(@RequestBody User user){
+    @PutMapping("/update/first-name")
+    public String updateFirstName(@RequestBody User user){
         if (user.getUserId() == 0 || user.getUserName() == null){
             return "Can't change stuff to null";
         }else{
             return userService.updateUserName(user.getUserId(),user.getUserName());
         }
     }
+
+    @PutMapping("/update/last-name")
+    public String updateLastName(@RequestBody User user){
+        if (user.getUserId() == 0 || user.getUserLastName() == null){
+            return "Can't change stuff to null";
+        }else{
+            return userService.updateUserName(user.getUserId(),user.getUserLastName());
+        }
+    }
+
     @PutMapping("/update/email")
     public String updateUserEmail(@RequestBody User user){
         if (user.getUserId() == 0 || user.getUserEmail() == null){
@@ -41,7 +51,7 @@ public class UserController {
     }
 
     @GetMapping
-    public User getUserById(@RequestParam int id) throws JsonProcessingException{
+    public User getUserById(@RequestParam int id){
         return userService.getUserById(id);
     }
     @GetMapping(value = "/all")

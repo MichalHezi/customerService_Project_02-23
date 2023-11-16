@@ -1,0 +1,25 @@
+package com.userService_Project_0223.repository.mapper;
+
+import com.userService_Project_0223.model.User;
+import org.springframework.jdbc.core.RowMapper;
+
+import java.sql.Date;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.time.LocalDate;
+
+public class UserMapper implements RowMapper<User> {
+    @Override
+    public User mapRow(ResultSet rs, int rowNum) throws SQLException {
+        return new User(
+                rs.getInt("id"),
+                rs.getString("first_name"),
+                rs.getString("last_name"),
+                rs.getString("email"),
+                rs.getInt("age"),
+                rs.getString("address"),
+                rs.getDate("joining_date").toLocalDate()
+        );
+    }
+
+}

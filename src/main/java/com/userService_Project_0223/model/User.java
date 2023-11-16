@@ -1,7 +1,8 @@
 package com.userService_Project_0223.model;
 
+
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
@@ -22,16 +23,6 @@ public class User {
     private String address;
     @JsonProperty("joining_date")
     private LocalDate joiningDate;
-
-    public User(Integer userId, String firstName, String lastName, String email, Integer age, String address, LocalDate joiningDate) {
-        this.userId = userId;
-        this.userName = firstName;
-        this.userLastName = lastName;
-        this.userEmail = email;
-        this.userAge = age;
-        this.address = address;
-        this.joiningDate = joiningDate;
-    }
 
     public Integer getUserId() {
         return userId;

@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public String updateUserName(int id, String name) {
-        return null;
+        return userRepository.updateUserName(id,name);
     }
 
     @Override
@@ -32,21 +32,20 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public String updateUserEmail(int id, String email) {
-        return null;
+        return userRepository.updateUserEmail(id,email);
     }
-
     @Override
     public User getUserById(Integer id) {
-        return null;
+        return userRepository.getUserById(id);
     }
 
     @Override
     public List<User> getAllUsers() {
-        return null;
+        return userRepository.getAllUsers();
     }
 
     @Override
     public List<String> getAllUserNames() {
-        return null;
+        return userRepository.getAllUserNames();
     }
 }

@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS user_details;
+DROP TABLE IF EXISTS users;
 
-CREATE TABLE user_details(
+CREATE TABLE users(
     id int NOT NULL AUTO_INCREMENT,
     first_name varchar(255) NOT NULL DEFAULT '',
     last_name varchar(255) NOT NULL DEFAULT '',
