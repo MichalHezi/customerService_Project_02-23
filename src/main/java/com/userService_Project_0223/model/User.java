@@ -24,6 +24,17 @@ public class User {
     @JsonProperty("joining_date")
     private LocalDate joiningDate;
 
+
+    public User(Integer userId, String userName, String userLastName, String userEmail, Integer userAge, String address, LocalDate joiningDate) {
+        this.userId = userId;
+        this.userName = userName;
+        this.userLastName = userLastName;
+        this.userEmail = userEmail;
+        this.userAge = userAge;
+        this.address = address;
+        this.joiningDate = joiningDate;
+    }
+
     public Integer getUserId() {
         return userId;
     }

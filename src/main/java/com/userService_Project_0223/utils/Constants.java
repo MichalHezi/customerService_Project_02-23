@@ -5,7 +5,7 @@ public final class Constants {
 
     }
 
-    public static final String CUSTOMER_TABLE_NAME = "users";
+    public static final String USER_TABLE_NAME = "users";
 
 
 }

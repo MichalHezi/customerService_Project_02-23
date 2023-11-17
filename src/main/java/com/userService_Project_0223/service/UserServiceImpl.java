@@ -17,7 +17,7 @@ public class UserServiceImpl implements UserService {
     private ObjectMapper objectMapper;
     @Override
     public Integer createUser(User user) {
-        return null;
+        return userRepository.createUser(user);
     }
 
     @Override
