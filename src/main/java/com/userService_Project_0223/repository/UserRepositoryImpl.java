@@ -20,7 +20,7 @@ public class UserRepositoryImpl implements UserRepository {
     private ObjectMapper objectMapper;
     @Override
     public Integer createUser(User user) {
-        String sql = "INSERT INTO " + Constants.USER_TABLE_NAME + "(first_name, last_name, email, age, address,joining_date) VALUES (?,?,?,?,?)";
+        String sql = "INSERT INTO " + Constants.USER_TABLE_NAME + "(first_name, last_name, email, age, address) VALUES (?,?,?,?,?)";
         jdbcTemplate.update(sql,user.getUserName(),user.getUserLastName(),user.getUserEmail(),user.getUserAge(),user.getAddress());
         sql = "SELECT MAX(id) FROM " + Constants.USER_TABLE_NAME;
         return jdbcTemplate.queryForObject(sql,Integer.class);

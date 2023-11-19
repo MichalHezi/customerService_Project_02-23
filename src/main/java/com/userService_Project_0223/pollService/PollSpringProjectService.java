@@ -9,6 +9,5 @@ import org.springframework.web.bind.annotation.GetMapping;
         url = "${second_micro_service.url}"
 )
 public interface PollSpringProjectService {
-    @GetMapping
-    String getStringFromSecondMicroService();
+
 }

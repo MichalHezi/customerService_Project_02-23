@@ -6,7 +6,6 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
-
 public class User {
 
     @JsonProperty("id")
